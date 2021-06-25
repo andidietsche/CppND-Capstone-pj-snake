@@ -8,9 +8,9 @@ bool Obstacle::ObstacleCell(int x, int y){
 }
 //checks when to insert new obstical
 bool Obstacle::InsertNewobstacle(int score){
-    if(score == 15) return true;
-    else if (score == 25) return true;
-    else if (score == 40) return true;
+    if(score == 2) return true;
+    else if (score == 4) return true;
+    else if (score == 6) return true;
     else return false;
 
 }

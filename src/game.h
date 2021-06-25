@@ -8,6 +8,7 @@
 #include "snake.h"
 #include "obstacle.h"
 
+//class Obstacle;
 
 class Game {
  public:
@@ -21,7 +22,7 @@ class Game {
  private:
   Snake snake;
   SDL_Point food;
-  Obstacle obstacle;
+  Obstacle* obstacle;
 
   std::random_device dev;
   std::mt19937 engine;

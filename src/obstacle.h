@@ -5,7 +5,7 @@
 #include <vector>
 #include "snake.h"
 #include <random>
-#include "game.h"
+//#include "game.h"
 
 
 class Obstacle {

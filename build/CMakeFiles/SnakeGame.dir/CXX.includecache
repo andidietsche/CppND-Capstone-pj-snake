@@ -6,97 +6,95 @@
 
 #IncludeRegexTransform: 
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/controller.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/controller.cpp
 controller.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/controller.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/controller.h
 iostream
 -
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/controller.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/controller.h
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/game.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/game.cpp
 game.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/game.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/game.h
 iostream
 -
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/game.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/game.h
 random
 -
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 controller.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/controller.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/controller.h
 renderer.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/renderer.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/renderer.h
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 obstacle.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/obstacle.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/obstacle.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/main.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/main.cpp
 iostream
 -
 controller.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/controller.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/controller.h
 game.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/game.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/game.h
 renderer.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/renderer.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/renderer.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/obstacle.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/obstacle.cpp
 obstacle.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/obstacle.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/obstacle.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/obstacle.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/obstacle.h
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 vector
 -
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 random
 -
-game.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/game.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/renderer.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/renderer.cpp
 renderer.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/renderer.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/renderer.h
 iostream
 -
 string
 -
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/renderer.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/renderer.h
 vector
 -
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.cpp
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.cpp
 snake.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 cmath
 -
 iostream
 -
 
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/snake.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/snake.h
 vector
 -
 SDL.h
-/home/alexdietsche/git/CppND-Capstone-Snake-Game/src/SDL.h
+/home/alexdietsche/git/CppND-Capstone-pj-snake/src/SDL.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

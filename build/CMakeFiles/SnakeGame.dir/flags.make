@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++17 -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/home/alexdietsche/git/CppND-Capstone-Snake-Game/src 
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/alexdietsche/git/CppND-Capstone-pj-snake/src 
 

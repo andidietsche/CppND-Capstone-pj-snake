@@ -6,7 +6,8 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
-      random_h(0, static_cast<int>(grid_height - 1)) {
+      random_h(0, static_cast<int>(grid_height - 1)),
+      obstacle(new Obstacle( grid_width, grid_height)) {
   PlaceFood();
 }
 
@@ -22,10 +23,23 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   while (running) {
     frame_start = SDL_GetTicks();
 
+
+  //   for(auto const &point : obstacle->obstacles){//TEST
+  //   std::cout<< "point.x = " << point.x <<std::endl;     //TEST
+  //   std::cout<< "point.y = " << point.y <<std::endl;     //TEST
+  // }
+
+
+    
+  //   std::cout<< "food.x = " << food.x <<std::endl;     //TEST
+  //   std::cout<< "food.y = " << food.y <<std::endl;     //TEST
+  
+
+
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food); //insert obstacle TODO
+    renderer.Render(snake, food , obstacle); //insert obstacle TODO ,obstacle
 
     frame_end = SDL_GetTicks();
 
@@ -57,11 +71,14 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item or obstacle before placing
     // food.
-    if (!snake.SnakeCell(x, y) ) {//&& !obstacle->ObstacleCell(x,y)
+    if (!snake.SnakeCell(x, y) && !obstacle->ObstacleCell(x,y))
+        std::cout<<"ifstatment !snake.Snakecell"<<std::endl; {//&& !obstacle->ObstacleCell(x,y) ERROR
       food.x = x;
       food.y = y;
-      if(obstacle->InsertNewobstacle(score)){
-        std::cout << "Obstacle placed"<<std::endl;
+      if(obstacle->InsertNewobstacle(score)){     //test
+        std::cout << "Obstacle placed"<<std::endl;//test
+        obstacle->PlaceObstacle(snake, score, food);
+        return;
       }
 
       return;
@@ -85,10 +102,13 @@ void Game::Update() {
     snake.GrowBody();
     snake.speed += 0.02;
   }
+  //Place Obstacle TODO
+  
 }
 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }
 
-//SDL_Point Game::GetPoint() const {return food;}
+//Obstacle* Game::GetObstacle() const {return obstacle;} //new
+
 

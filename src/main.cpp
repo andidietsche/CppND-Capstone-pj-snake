@@ -2,6 +2,9 @@
 #include "controller.h"
 #include "game.h"
 #include "renderer.h"
+#include "SDL.h"
+#include "obstacle.h"
+
 
 int main() {
   constexpr std::size_t kFramesPerSecond{60};
@@ -18,5 +21,8 @@ int main() {
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
+
+
+
   return 0;
 }

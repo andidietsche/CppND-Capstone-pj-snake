@@ -18,6 +18,7 @@ class Game {
   int GetScore() const;
   int GetSize() const;
   //SDL_Point GetPoint() const;
+  //Obstacle* GetObstacle() const; //new
 
  private:
   Snake snake;

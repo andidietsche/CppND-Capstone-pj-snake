@@ -38,10 +38,14 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food) {
+void Renderer::Render(Snake const snake, SDL_Point const &food, Obstacle* const obstacle) { //insert obstical , Obstacle* obstacle
   SDL_Rect block;
+  SDL_Rect block2;//test
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
+  //test
+  block2.w = screen_width / grid_width;
+  block2.h = screen_height / grid_height;
 
   // Clear screen
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
@@ -60,6 +64,32 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
     block.y = point.y * block.h;
     SDL_RenderFillRect(sdl_renderer, &block);
   }
+
+  // TODO Render obstacle
+  // SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xFF, 0x00, 0xFF); //lime color
+  //   if(!obstacle->obstacles.empty()){ 
+  //     for (SDL_Point const &obst : obstacle->obstacles){
+  //       block2.x = obst.x * block.w*2;
+  //       block2.y = obst.y * block.h*2;
+  //       SDL_RenderFillRect(sdl_renderer, &block2);
+  //     }
+  // }
+
+  //test
+  if(!obstacle->obstacles.empty()){ 
+    //std::cout<<"obstacle should have been rendered"<<std::endl; //checkpoint
+    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+    for (SDL_Point const &obst : obstacle->obstacles){
+      block.x = obst.x * block.w;
+      block.y = obst.y * block.h;
+      SDL_RenderFillRect(sdl_renderer, &block);
+      }
+    }
+  // obst hat keine eintraege.
+    
+  
+
+  
 
   // Render snake's head
   block.x = static_cast<int>(snake.head_x) * block.w;

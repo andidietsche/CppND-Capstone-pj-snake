@@ -3,6 +3,7 @@
 
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: ../src/controller.cpp
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: ../src/controller.h
+CMakeFiles/SnakeGame.dir/src/controller.cpp.o: ../src/obstacle.h
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: ../src/snake.h
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /usr/include/SDL2/SDL.h
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /usr/include/SDL2/SDL_assert.h
@@ -199,6 +200,7 @@ CMakeFiles/SnakeGame.dir/src/obstacle.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/SnakeGame.dir/src/obstacle.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/SnakeGame.dir/src/obstacle.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/obstacle.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/renderer.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/snake.h
@@ -247,6 +249,10 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/controller.h
+CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/game.h
+CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/obstacle.h
+CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/renderer.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/snake.cpp
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/snake.h
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /usr/include/SDL2/SDL.h

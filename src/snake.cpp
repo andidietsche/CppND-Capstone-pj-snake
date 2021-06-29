@@ -1,6 +1,8 @@
 #include "snake.h"
 #include <cmath>
 #include <iostream>
+#include "obstacle.h"
+#include "game.h"
 
 void Snake::Update() {
   SDL_Point prev_cell{
@@ -14,8 +16,11 @@ void Snake::Update() {
 
   // Update all of the body vector items if the snake head has moved to a new
   // cell.
+    // Obstacle* obst;
+    // obst = Game::Game::GetObstacle(); //get the created obstacle
+
   if (current_cell.x != prev_cell.x || current_cell.y != prev_cell.y) {
-    UpdateBody(current_cell, prev_cell);
+    UpdateBody(current_cell, prev_cell );//, obst insert obstacle to acces obstacle point
   }
 }
 
@@ -43,7 +48,7 @@ void Snake::UpdateHead() {
   head_y = fmod(head_y + grid_height, grid_height);
 }
 
-void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) {
+void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) { //Obstacle obstacle is new
   // Add previous head location to vector
   body.push_back(prev_head_cell);
 
@@ -61,6 +66,11 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
       alive = false;
     }
   }
+  // Check if snake doesn't crash into obstacle
+
+  // for(auto const &obst : obstacle->obstacles){
+  //   if(current_head_cell.x == obst.x && current_head_cell.y == obst.y) alive = false;
+  // }
 }
 
 void Snake::GrowBody() { growing = true; }

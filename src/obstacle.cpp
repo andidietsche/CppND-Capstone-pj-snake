@@ -35,7 +35,13 @@ bool Obstacle::InsertNewobstacle(int score){
 
 }
 void Obstacle::UpdateObstacle(SDL_Point &point){
+    SDL_Point nextpoint;
     obstacles.push_back(point);
+
+    //create rectangle
+    nextpoint.x = point.x + 1;
+    nextpoint.y = point.y;
+    obstacles.push_back(nextpoint);
 }
 
 //need an object of itself to check for not placing new obstalce on top a already existing one
@@ -51,7 +57,7 @@ void Obstacle::PlaceObstacle(Snake snake, int score, SDL_Point food){
         //check if location is free, not on food, snake element or obstacle
         if(!snake.SnakeCell(x,y) && x != food.x && y != food.y)
             if(obstacles.empty()) {
-                std::cout<<"If empty statement"<< std::endl;
+                //std::cout<<"If empty statement"<< std::endl; //check
                 point.x = x;
                 point.y = y;
                 break;  

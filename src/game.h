@@ -17,8 +17,11 @@ class Game {
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
+  //void Checkobstacle();
   //SDL_Point GetPoint() const;
   //Obstacle* GetObstacle() const; //new
+
+ 
 
  private:
   Snake snake;

@@ -71,12 +71,12 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item or obstacle before placing
     // food.
-    if (!snake.SnakeCell(x, y) && !obstacle->ObstacleCell(x,y))
-        std::cout<<"ifstatment !snake.Snakecell"<<std::endl; {//&& !obstacle->ObstacleCell(x,y) ERROR
+    if (!snake.SnakeCell(x, y) && !obstacle->ObstacleCell(x,y)){
+        
       food.x = x;
       food.y = y;
       if(obstacle->InsertNewobstacle(score)){     //test
-        std::cout << "Obstacle placed"<<std::endl;//test
+        //std::cout << "Obstacle placed"<<std::endl;//test
         obstacle->PlaceObstacle(snake, score, food);
         return;
       }
@@ -102,13 +102,13 @@ void Game::Update() {
     snake.GrowBody();
     snake.speed += 0.02;
   }
-  //Place Obstacle TODO
   
 }
+
+
 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }
 
-//Obstacle* Game::GetObstacle() const {return obstacle;} //new
 
 

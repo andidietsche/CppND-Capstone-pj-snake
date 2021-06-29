@@ -15,10 +15,11 @@ class Snake {
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
 
-  void Update();
+  void Update(); 
 
   void GrowBody();
   bool SnakeCell(int x, int y);
+  
 
   Direction direction = Direction::kUp;
 
@@ -31,7 +32,7 @@ class Snake {
 
  private:
   void UpdateHead();
-  void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell); //, Obstacle* obstacle new
+  void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell); //, Obstacle* obstacle new, Game game
 
   bool growing{false};
   int grid_width;

@@ -78,7 +78,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, Obstacle* const 
   //test
   if(!obstacle->obstacles.empty()){ 
     //std::cout<<"obstacle should have been rendered"<<std::endl; //checkpoint
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
     for (SDL_Point const &obst : obstacle->obstacles){
       block.x = obst.x * block.w;
       block.y = obst.y * block.h;

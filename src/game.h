@@ -10,23 +10,19 @@
 
 //class Obstacle;
 
-class Game {
- public:
+class Game
+{
+public:
   Game(std::size_t grid_width, std::size_t grid_height);
+
   void Run(Controller const &controller, Renderer &renderer,
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
-  //void Checkobstacle();
-  //SDL_Point GetPoint() const;
-  //Obstacle* GetObstacle() const; //new
 
- 
-
- private:
+private:
   Snake snake;
   SDL_Point food;
-  Obstacle* obstacle;
 
   std::random_device dev;
   std::mt19937 engine;
@@ -37,6 +33,7 @@ class Game {
 
   void PlaceFood();
   void Update();
+  void PlaceObstacle();
 };
 
 #endif

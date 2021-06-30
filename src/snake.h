@@ -5,21 +5,20 @@
 #include "SDL.h"
 #include "obstacle.h"
 
+class Obstacle;
+
 class Snake {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
-  Snake(int grid_width, int grid_height)
-      : grid_width(grid_width),
-        grid_height(grid_height),
-        head_x(grid_width / 2),
-        head_y(grid_height / 2) {}
+  Snake(std::size_t grid_width, std::size_t grid_height); //error Unterschied zu game, std::size_t und hier int
+         
 
   void Update(); 
 
   void GrowBody();
   bool SnakeCell(int x, int y);
-  
+
 
   Direction direction = Direction::kUp;
 
@@ -29,6 +28,7 @@ class Snake {
   float head_x;
   float head_y;
   std::vector<SDL_Point> body;
+  Obstacle* obstacle;
 
  private:
   void UpdateHead();
@@ -37,6 +37,7 @@ class Snake {
   bool growing{false};
   int grid_width;
   int grid_height;
+  
 };
 
 #endif

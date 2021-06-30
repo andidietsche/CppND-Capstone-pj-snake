@@ -6,17 +6,17 @@
 #include "snake.h"
 #include <random>
 #include <iostream>
-//#include "game.h"
+
 
 class Snake;
 
 class Obstacle {
 
 public:
-    //constrcutor default
+    //constrcutor
     Obstacle(std::size_t grid_width, std::size_t grid_height);
 
-
+    
     std::vector<SDL_Point> obstacles;
     bool ObstacleCell(int x, int y);
     bool InsertNewobstacle(int score);

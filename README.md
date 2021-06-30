@@ -1,12 +1,11 @@
-# CPPND: Capstone Snake Game Example
+# CPPND: Capstone Snake Game 
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+As my final project I added a feature to the given Snake game. This feature creates obstacles depending on how many scores you reached. So with increasing score more obstacles are placed. The obstacles are rendred in red. 
+
+Since I wanted to really understand object oriented programming I added a new class Obstacle. I really had some issues at the beginning, because my architecture doesn't made sense. So with this Capstone project I have hone my skills regarding OOP and how to integrate new .cpp files in a bigger project, regarding the CMakeLists.txt file and how to add new executables.
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -44,3 +43,20 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
+## Met Project Specification
+
+*Loops, Functions, I/O
+	-loops and functions look at the obstacle.cpp file
+
+*Object Oriented Programming
+	-New Class obstacle is added (look at obstacle.cpp/obstalce.h)
+	-All class data members are explicitly specified as public, protected, or private
+	-All class members are set to argument calues are initialized through member initialization lists. (obstacle.cpp construtor)
+	-All class member functions document their effects, implementation either through function names,comments, or details from formal documentation. Member functions do nottheir interfaces. change program 		state in undocumented ways.
+
+## What is new
+The class Obstacle has to check whether a new obstacle should be placed or not. So I added a member variable of type Obstacle to the class Snake. So in the class Game we only need a member variable of typ Snake to acces the obstacle. When placing an obstacle we have to check that it is not placed on top on the snake's body nor on the food, so when we make add a member of type obstacle to the class snake we can easy passover the snake's body. After the score hits 10, 20 and 30 one new obstacle is added is red.
+
+

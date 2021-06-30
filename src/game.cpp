@@ -7,7 +7,6 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1))
-//,obstacle(new Obstacle(grid_width, grid_height))
 {
   PlaceFood();
 }
@@ -25,15 +24,6 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   while (running)
   {
     frame_start = SDL_GetTicks();
-
-    // for (auto const &point : snake.obstacle->obstacles)
-    // {                                                    //TEST
-    //   std::cout << "point.x = " << point.x << std::endl; //TEST
-    //   std::cout << "point.y = " << point.y << std::endl; //TEST
-    // }
-
-    // std::cout << "food.x = " << food.x << std::endl; //TEST
-    // std::cout << "food.y = " << food.y << std::endl; //TEST
 
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
@@ -87,8 +77,7 @@ void Game::PlaceFood()
 void Game::PlaceObstacle()
 {
   int x, y;
-  //std::cout << "obstacle should be placed" << std::endl;
-  SDL_Point point; //have privat member now (wall)
+  SDL_Point point;
 
   while (true)
   {
@@ -137,11 +126,11 @@ void Game::Update()
   {
     score++;
     PlaceFood();
+
     //check if obstacle should be placed
     if (snake.obstacle->InsertNewobstacle(score))
     {
       PlaceObstacle();
-      //std::cout << "Placeobstacle()" << std::endl; //test
     }
 
     // Grow snake and increase speed.

@@ -9,9 +9,8 @@ Snake::Snake(std::size_t grid_width, std::size_t grid_height)
       grid_height(grid_height),
       head_x(grid_width / 2),
       head_y(grid_height / 2),
-      obstacle(new Obstacle(grid_width, grid_height)) //error Unterschied zu game, std::size_t und hier int
-{
-}
+      obstacle(new Obstacle(grid_width, grid_height))
+{}
 
 void Snake::Update()
 { //test Game game
@@ -58,7 +57,7 @@ void Snake::UpdateHead()
 }
 
 void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
-{ //Obstacle obstacle is new
+{
   // Add previous head location to vector
   body.push_back(prev_head_cell);
 
@@ -73,7 +72,7 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
     size++;
   }
 
-  // Check if the snake has died.
+  // Check if the snake doesn't crash into its body
   for (auto const &item : body)
   {
     if (current_head_cell.x == item.x && current_head_cell.y == item.y)
@@ -81,9 +80,8 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
       alive = false;
     }
   }
-  
-  // Check if snake doesn't crash into obstacle
 
+  // Check if snake doesn't crash into obstacle
   for (auto const &obst : obstacle->obstacles)
   {
     if (current_head_cell.x == obst.x && current_head_cell.y == obst.y)

@@ -44,12 +44,13 @@ Renderer::~Renderer()
 }
 
 void Renderer::Render(Snake const snake, SDL_Point const &food)
-{ //insert: , Obstacle* const obstacle
+{ 
   SDL_Rect block;
-  SDL_Rect block2; //test
+  //extand the obstacle to a 2*1 rectangle
+  SDL_Rect block2; 
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
-  //test
+
   block2.w = screen_width / grid_width;
   block2.h = screen_height / grid_height;
 

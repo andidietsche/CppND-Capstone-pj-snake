@@ -11,13 +11,11 @@ bool Obstacle::ObstacleCell(int x, int y)
 
     if (obstacles.empty())
     {
-        //std::cout << "vector is empty" << std::endl;
         return false;
-    } //checks if no obstacles have been placed
+    }
 
     else
     {
-        //std::cout << "vector is not empty" << std::endl;
 
         for (auto &point : obstacles)
         {
@@ -29,18 +27,17 @@ bool Obstacle::ObstacleCell(int x, int y)
         }
     }
 }
-//checks when to insert new obstical
+//checks when to insert new obstacle
 bool Obstacle::InsertNewobstacle(int score)
 {
-    if (score == 2)
+    if (score == 10)
         return true;
-    else if (score == 8)
+    else if (score == 20)
     {
-        //std::cout << "score 8 achieved" << std::endl;
         return true;
-        }
+    }
 
-    else if (score == 10)
+    else if (score == 30)
         return true;
     else
         return false;
@@ -57,7 +54,7 @@ void Obstacle::UpdateObstacle(SDL_Point &point)
     obstacles.push_back(nextpoint);
 }
 
-//need an object of itself to check for not placing new obstalce on top a already existing one
+// checks that x,y isn't on top of the body or food and adds it then to the obstacles vector
 void Obstacle::PlaceObstacle(Snake snake, int score, SDL_Point food)
 {
 
